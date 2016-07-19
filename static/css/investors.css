@@ -1,3 +1,74 @@
+/********** 重写 bootstrap ***************/
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.nav.navbar-nav{
+    font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #ffe430;
+    background: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #ffe430;
+}
+
+.navbar-fixed-top {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/********** 重写 bootstrap ***************/
+
+a {
+    text-decoration: none;
+}
+
+.main-slider, .odd, .even{
+	border-bottom: 1px solid #ddd;
+}
+
+.odd {
+	background: #f1f1f1;
+}
+
+.even {
+	background:#e9e9e9;
+}
+
+#logo {
+    background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/140x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+    height: 60px;
+    margin: auto;
+    margin-top: 10px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+}
+
+#logo:hover {
+    height: 70px;
+    background-size: 70px;
+    margin-top: 6px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+}
 .slides {
     height: 610px;
 }
@@ -13,7 +84,7 @@
 
 .investor-avatar.large-avatar {
     background-size: cover;
-    background-position: center 45px;
+    background-position: center 25px;
 }
 
 .investor-avatar.left-avatar {
@@ -56,4 +127,108 @@
 
 .investor-avatar .slides-li-content .content p{
 	font-size: 20px;
+}
+
+.project-avatar{
+	height: 200px;
+    background-repeat: no-repeat;
+	background-size: 220px;
+	cursor: pointer;
+	padding: 50px 0 0 20px;
+}
+
+.project-avatar.left-avatar {
+    background-position: left 40px;
+	text-align: right;
+		    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+}
+
+.project-avatar.left-avatar:hover {
+    background-position: left 28px;
+
+		    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+}
+
+.project-avatar.right-avatar {
+    background-position: right 40px;
+	text-align: left;
+		    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+}
+
+.project-avatar.right-avatar:hover {
+    background-position: right 28px;
+		    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+}
+
+.project-list {
+	background-image: url(http://o7ezmp5vl.bkt.clouddn.com/comingsoon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100px;
+    height: 120px;
+}
+
+.project-list ul{
+	list-style: none;
+}
+
+.project-list ul li.item{
+	margin: 0 15px 15px 0;
+}
+
+.project-list ul li.item.right{
+	float: right;
+}
+
+.project-list ul li.item.left{
+	float: left;
+}
+
+.project-counter .title{
+	font-size: 20px;
+	text-align: center;
+}
+
+.project-counter .count{
+	font-size: 70px;
+	text-align: center;
+}
+
+.site-title {
+	text-align: center;
+	margin-top: -170px;
+    background: rgba(52, 52, 52, 0.4);
+    color: #fff;
+    padding: 13px;
+}
+
+.site-title #title{
+	font-size: 42px;
+}
+
+.site-title #subtitle{
+	font-size: 22px;
+}
+
+.block-head {
+	font-size: 33px;
+	padding: 35px 10px 5px 10px;
+	text-align: center;
+}
+
+.block-head hr{
+    border: solid 1px #3EC9A7;
+    width: 33px;
 }

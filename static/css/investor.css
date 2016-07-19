@@ -1,3 +1,54 @@
+/********** 重写 bootstrap ***************/
+
+.nav.navbar-nav{
+    font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #ffe430;
+    background: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #ffe430;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/********** 重写 bootstrap ***************/
+
+a {
+    text-decoration: none;
+}
+
+#logo {
+    background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/140x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+    height: 60px;
+    margin: auto;
+    margin-top: 10px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+}
+
+#logo:hover {
+    height: 70px;
+    background-size: 70px;
+    margin-top: 6px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+}
 .slides {
     height: 610px;
 }

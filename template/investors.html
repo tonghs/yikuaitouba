@@ -1,21 +1,27 @@
 <%inherit file="_base.html"/>
 
-<%block name="title">一块投吧，不服来弹</%block>
+<%block name="title">一块投吧</%block>
 <%block name="css">
     <link rel="stylesheet" href="${load_css('unslider/unslider.css')}">
     <link rel="stylesheet" href="${load_css('unslider/unslider-dots.css')}">
-    <link rel="stylesheet" href="${load_css('investor.css')}">
     <link rel="stylesheet" href="${load_css('investors.css')}">
 </%block>
 
 <div>
-    <div class="my-slider">
+	<a id="investor"></a>
+    <div class="main-slider">
         <ul>
-            <li style="background:#f1f1f1;">
-                <div class="investor-avatar large-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/investors_.png);"> </div>
+            <li class="odd">
+                <div class="investor-avatar container large-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/investors_.png);">
+				</div>
+				<div class="site-title">
+					<span id="title">大型创投类节目 一块投吧</span>
+					<br>
+					<span id="subtitle">8 月 14 日 晚 21:25 深圳卫视首播</span>
+				</div>
             </li>
-            <li style="background:#e9e9e9;">
-                <div class="investor-avatar left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/dengfeng.png);">
+            <li class="even">
+                <div class="investor-avatar container left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/dengfeng.png);">
 					<div class="slides-li-content">
 						<div class="name">邓锋</div>
 						<div class="title">北极光创投创始人</div>
@@ -32,8 +38,8 @@
 					</div>
                 </div>
             </li>
-            <li style="background:#f1f1f1;">
-                <div class="investor-avatar right-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yuminhong.png);">
+            <li class="odd">
+                <div class="investor-avatar container right-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yuminhong.png);">
 					<div class="slides-li-content">
 						<div class="name">俞敏洪</div>
 						<div class="title">宏泰基金联合创始人</div>
@@ -51,8 +57,8 @@
 					</div>
                 </div>
             </li>
-            <li style="background:#e9e9e9;">
-                <div class="investor-avatar left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/zhangquanling.png);">
+            <li class="even">
+                <div class="investor-avatar container left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/zhangquanling.png);">
 					<div class="slides-li-content">
 						<div class="name">张泉灵</div>
 						<div class="title">紫牛基金联合创始人</div>
@@ -70,8 +76,8 @@
 					</div>
                 </div>
             </li>
-            <li style="background:#f1f1f1;">
-                <div class="investor-avatar right-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/linyilun.png);">
+            <li class="odd">
+                <div class="investor-avatar container right-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/linyilun.png);">
 					<div class="slides-li-content">
 						<div class="name">林依轮</div>
 						<div class="title">歌手&nbsp;创投人</div>
@@ -91,6 +97,121 @@
             </li>
         </ul>
     </div>
+	<div class="block-head">
+		<a id="project"></a>
+		抢手项目
+		<hr>
+	</div>
+	<div>
+		<div class="item odd">
+			<div class="project-avatar container left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/dengfeng.png?imageMogr2/thumbnail/440x);">
+				<div class="row">
+					<div class="col-md-2">
+						&nbsp;	
+					</div>
+					<div class="col-md-8 project-list">
+						## <ul>
+						## 	<li class="item right">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## 	<li class="item right">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## </ul>
+					</div>
+					<div class="col-md-2 project-counter">
+						<div class="title">项目数</div>
+						<div class="count">x</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item even">
+			<div class="project-avatar container right-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yuminhong.png?imageMogr2/thumbnail/440x);">
+				<div class="row">
+					<div class="col-md-2 project-counter">
+						<div class="title">项目数</div>
+						<div class="count">x</div>
+					</div>
+					<div class="col-md-8 project-list">
+						## <ul>
+						## 	<li class="item left">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## 	<li class="item left">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## </ul>
+					</div>
+					<div class="col-md-2">
+						&nbsp;	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item odd">
+			<div class="project-avatar container left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/zhangquanling.png?imageMogr2/thumbnail/440x);">
+				<div class="row">
+					<div class="col-md-2">
+						&nbsp;	
+					</div>
+					<div class="col-md-8 project-list">
+						## <ul>
+						## 	<li class="item right">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## 	<li class="item right">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## </ul>
+					</div>
+					<div class="col-md-2 project-counter">
+						<div class="title">项目数</div>
+						<div class="count">x</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item even">
+			<div class="project-avatar container right-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/linyilun.png?imageMogr2/thumbnail/440x);">
+				<div class="row">
+					<div class="col-md-2 project-counter">
+						<div class="title">项目数</div>
+						<div class="count">x</div>
+					</div>
+					<div class="col-md-8 project-list">
+						## <ul>
+						## 	<li class="item left">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## 	<li class="item left">
+						## 		<a href="#">
+						## 			<img src="http://www.show1.cn/templets/xingk/images/logo.png">
+						## 		</a>
+						## 	</li>
+						## </ul>
+					</div>
+					<div class="col-md-2">
+						&nbsp;	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <%block name="js">
