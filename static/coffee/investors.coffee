@@ -1,5 +1,5 @@
 $('.my-slider').unslider( {
-    # autoplay: true
+    autoplay: true
     infinite: true
     arrows: false
 })
