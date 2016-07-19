@@ -1,0 +1,54 @@
+.slides {
+    height: 610px;
+}
+
+.investor-avatar {
+    height: 610px;
+	width: 1280px;
+    background-repeat: no-repeat;
+    background-position: left center;
+	background-size: 512px;
+	margin: auto;
+}
+
+.investor-avatar.left-avatar {
+    background-position: left 45px;
+}
+
+.investor-avatar.right-avatar {
+    background-position: right 45px;
+}
+
+.investor-avatar.left-avatar .slides-li-content {
+	padding-left: 782px;
+    padding-top: 154px;
+}
+
+.investor-avatar.right-avatar .slides-li-content {
+	float: right;
+	padding-right: 782px;
+    padding-top: 154px;
+}
+
+.investor-avatar .slides-li-content hr{
+    margin: 40px 0 43px 0;
+    border: solid 2px #3EC9A7;
+    width: 33px;
+}
+
+.investor-avatar .slides-li-content .name {
+	font-size: 33px;
+	font-weight: bold;
+}
+
+.investor-avatar .slides-li-content .title{
+	font-size: 25px;
+}
+
+.investor-avatar .slides-li-content .content{
+	margin-top: 20px;
+}
+
+.investor-avatar .slides-li-content .content p{
+	font-size: 20px;
+}

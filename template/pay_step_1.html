@@ -1,0 +1,13 @@
+<%inherit file="_base.html"/>
+<%block name="css">
+    <link rel="stylesheet" href="${load_css('index.css')}">
+</%block>
+<div>
+    <a href="pay/step/1" id="alipay"><img src="http://ax.xrkmedia.com/file/alipay_logo/182x64.png"></a>
+    <br>
+    ${charge}
+</div>
+
+<%block name="js">
+    <script src="${load_js('pay.js')}"></script>
+</%block>
