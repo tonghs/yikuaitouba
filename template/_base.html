@@ -1,64 +1,111 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html xmlns:wb=“http://open.weibo.com/wb”>
     <head>
         <title>
             <%block name="title">${APP}</%block>
         </title>
+		<meta name="keywords" content="一块投吧,创投类电视节目,投创类节目,创投节目"/>
+		<meta name="description" content="一块投吧，大型创投类节目。" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="wb:webmaster" content="05e98be6944da2b2" />
+
         <link rel="stylesheet" href="${load_css('bootstrap-3.3.5-dist/bootstrap.min.css')}">
         <link rel="stylesheet" href="${load_css('base.css')}">
         <%block name="css">
         </%block>
     </head>
     <body>
-        <div>
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-						##<a class="navbar-brand" href="/" title="一块投吧">
-						## 	<img src="http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/200x" width="60"/>
-						##</a>
-					</div>
-					<div id="navbar" class="collapse navbar-collapse">
-						<div class="row">
-							<div class="col-md-4">
-								<ul class="nav navbar-nav">
-									## <li class="active"><a href="/">投资人</a></li>
-									<li><a href="javascript: scroll('investor');">投资人</a></li>
-									<li><a href="javascript: scroll('project');">抢手项目</a></li>
-									<li><a href="#contact">精彩节目</a></li>
-								</ul>
-							</div>
-							<div class="col-md-4">
-								<a href="/" title="一块投吧">
-									<div id="logo">
-									</div>
-								</a>
-							</div>
-							<div class="col-md-4">
-								<ul class="nav navbar-nav navbar-right">
-									<li><a href="./">最新节目</a></li>
-									<li><a href="../navbar-fixed-top/">最热花絮</a></li>
-									<li><a href="../navbar-fixed-top/">不服来弹</a></li>
-								</ul>
-							</div>
+		<div id="mobile">
+			<div id="wrapper">
+				<p>嗯，我觉得我应该告诉过你，要用电脑访问，对吧？别着急，手机版的马上就快能访问了。</p>
+				<p>我们的节目将于 8 月 14 日起在深圳卫视周日晚黄金档 21:25 播出，记得来看哦 ^_^</p>
+				<p>现在先给你看下我们的 Logo 吧：</p>
+			</div>
+			<img src="http://o7ezmp5vl.bkt.clouddn.com/tv_logo_.jpg" style="width: 100%;">
+		</div>
+
+        <div id="pc">
+            <%block name="menu">
+				<nav class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							##<a class="navbar-brand" href="/" title="一块投吧">
+							## 	<img src="http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/200x" width="60"/>
+							##</a>
 						</div>
-					</div><!--/.nav-collapse -->
-				</div>
-			</nav>
+						<div id="navbar" class="collapse navbar-collapse">
+							<div class="row">
+								<div class="col-md-4">
+									<ul class="nav navbar-nav">
+										## <li class="active"><a href="/">投资人</a></li>
+										<li><a href="javascript: scroll('yikuaitouba');">节目介绍</a></li>
+										<li><a href="javascript: scroll('tv');">最新节目</a></li>
+										<li><a href="javascript: scroll('investor');">投资人</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<a href="/" title="一块投吧">
+										<div id="logo">
+										</div>
+									</a>
+								</div>
+								<div class="col-md-4">
+									<ul class="nav navbar-nav navbar-right">
+										<li><a href="javascript: scroll('project');">热抢项目</a></li>
+										<li><a href="javascript: scroll('trends');">最新动态</a></li>
+										<li><a href="javascript: scroll('weibo');">话题讨论</a></li>
+									</ul>
+								</div>
+							</div>
+						</div><!--/.nav-collapse -->
+					</div>
+				</nav>
+            </%block>
 
             ${next.body()}
 
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-1 right">
+							<div id="logo">
+								&nbsp;
+							</div>
+						</div>
+						<div class="col-md-11 left">
+							<div>
+								<ul>
+									<li>
+										<a href="/">首页</a>
+									</li>
+									<li>
+										<a href="http://form.mikecrm.com/f.php?t=AFbKox" target="_blank">报名参加节目</a>
+									</li>
+									<li>
+										<a href="http://xrkmedia.com" target="_blank">向日葵传媒</a>
+									</li>
+									<li>
+										<a href="http://comefunding.com" target="_blank">平台</a>
+									</li>
+								</ul>
+							</div>
+							<div class="fn-clear-f"></div>
+							<div id="copyright">&copy; 2016 深圳一块投吧文化科技有限公司 </div>
+						</div>
+					</div>
+				</div>
+			</div>
             <script src="${load_js('jquery-2.2.3.min.js')}"></script>
             <script src="${load_js('bootstrap-3.3.5-dist/bootstrap.min.js')}"></script>
             <script src="${load_js('base.js')}"></script>
+			<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
             <%block name="js">
             </%block>
         </div>

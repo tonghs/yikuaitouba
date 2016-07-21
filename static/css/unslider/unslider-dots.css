@@ -16,7 +16,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    margin-top: -35px;
+    margin-top: -30px;
 }
 
 .unslider-nav ol {
@@ -25,11 +25,11 @@
 }
 .unslider-nav ol li {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     margin: 0 4px;
     background: #757575;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     text-indent: -999em;
     border: 0;
@@ -40,7 +40,7 @@
     -o-transition: all .1s ease-out;
 }
 .unslider-nav ol li.unslider-active {
-    width: 20px;
+    width: 16px;
     background: #3EC9A7;
     cursor: default;
     transition: all .1s ease-out;
