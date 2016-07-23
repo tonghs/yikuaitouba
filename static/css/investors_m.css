@@ -1,0 +1,21 @@
+#menu {
+    background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/120x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+}
+
+.odd {
+	background: #f1f1f1;
+}
+
+.even {
+	background:#e9e9e9;
+}

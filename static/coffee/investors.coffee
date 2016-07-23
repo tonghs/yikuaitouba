@@ -1,5 +1,5 @@
 $('.main-slider').unslider( {
-    autoplay: false
+    autoplay: true
     infinite: true
     arrows: false
     delay: 5000
