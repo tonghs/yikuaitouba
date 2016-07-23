@@ -86,3 +86,14 @@ a:hover{
 }
 /********* animation end *******/
 
+#scroll-to-top {
+	height: 40px;
+	width: 40px;
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 2147483647;
+}
+

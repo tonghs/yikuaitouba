@@ -1,5 +1,5 @@
 $('.main-slider').unslider( {
-    autoplay: true
+    autoplay: false
     infinite: true
     arrows: false
     delay: 5000
@@ -8,7 +8,7 @@ $('.main-slider').unslider( {
 $('.trends-slider').unslider( {
     autoplay: true
     arrows: false
-    delay: 1500
+    delay: 2000
 })
 
 window.scroll = (id)->

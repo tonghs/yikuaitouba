@@ -240,8 +240,9 @@ nav #logo:hover {
 
 .trends-slider .large-avatar {
     height: 480px;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #danmu iframe{
@@ -299,39 +300,17 @@ nav #logo:hover {
 	font-size: 13px;
 }
 
-#footer .left {
+#footer .item{
 	padding-top: 13px;
 }
 
-#footer .left ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-#footer .left ul li{
-	float: left;
-	padding-right: 10px;
-}
-
-#footer .left ul li a{
+#footer .item p a{
 	color: #aaa;
 	font-size: 13px;
 	text-decoration: none;
 }
 
-#footer .right #logo {
-	height: 64px;
-	width: 64px;
-	border-radius: 64px;
-	background-image: url(http://o7ezmp5vl.bkt.clouddn.com/tv_logo_.jpg?imageMogr2/thumbnail/x144);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: auto 64px;
-}
-
 #footer #copyright {
-	padding-top: 6px;
 }
 
 #weibo-wrapper {
@@ -361,4 +340,12 @@ nav #logo:hover {
 	#pc {
 		display: none;
 	}
+}
+
+#footer #tel{
+	background-image: url(http://o7ezmp5vl.bkt.clouddn.com/footer_phone.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 58px;
+    padding-left: 68px;
 }
