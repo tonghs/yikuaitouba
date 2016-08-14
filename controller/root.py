@@ -12,6 +12,18 @@ class Investors(Base):
         self.render()
 
 
+@route('/new')
+class NewIndex(Base):
+    def get(self):
+        self.render()
+
+
+@route('/mishi')
+class Mishi(Base):
+    def get(self):
+        self.render()
+
+
 @route('/danmu')
 class Danmu(Base):
     def get(self):

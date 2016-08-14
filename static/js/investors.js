@@ -19,4 +19,10 @@
     }, 800);
   };
 
+  $("#play").fancybox({
+    padding: 0,
+    width: 800,
+    height: 490
+  });
+
 }).call(this);

@@ -255,11 +255,20 @@ nav #logo:hover {
 }
 
 #project-wrapper {
-	height: 410px;
-	background-color: #f1f1f1;
-	background-image: url(http://o7ezmp5vl.bkt.clouddn.com/comingsoon.png);
+	height: 200px;
+	background-color: #ccc;
+	/*background-image: url(http://o7ezmp5vl.bkt.clouddn.com/comingsoon.png);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center;*/
+}
+
+#project-wrapper .item{
+    text-align: center;
+    line-height: 200px;
+}
+
+#project-wrapper img{
+   width: 150px; 
 }
 
 #tv-wrapper {
@@ -273,10 +282,6 @@ nav #logo:hover {
 #tv {
 	height: 480px;
 	background-color: rgba(52, 52, 52, 0.6);
-	background-size: 64px; 
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url(http://o7ezmp5vl.bkt.clouddn.com/play-button.png?imageMogr2/thumbnail/128x);
 	cursor: pointer;
     transition: all .1s ease-out;
     -webkit-transition: all .1s ease-out;
@@ -286,6 +291,28 @@ nav #logo:hover {
 
 #tv:hover {
 	background-color: rgba(52, 52, 52, 0.4);
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+}
+
+#tv a#play{
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 480px;
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    background-image: url(http://o7ezmp5vl.bkt.clouddn.com/play-button.png?imageMogr2/thumbnail/128x);
+}
+
+#tv a#play:hover{
 	background-size: 72px; 
     transition: all .1s ease-out;
     -webkit-transition: all .1s ease-out;
@@ -411,7 +438,7 @@ nav #logo:hover {
 
 
 #mobile .m-section #logo {
-    background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/120x);
+    background-image: url(http://o7ezmp5vl.bkt.clouddn.com/yikuaitouba_logo.png?imageMogr2/thumbnail/420x420);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 80px;
@@ -453,14 +480,32 @@ nav #logo:hover {
 }
 
 #mobile #m-project-wrapper {
-	height: 240px;
+	/*height: 240px;
     background-image: url(http://o7ezmp5vl.bkt.clouddn.com/comingsoon.png);
     background-repeat: no-repeat;
-    background-position: center 70px;
+    background-position: center 70px;*/
 }
+
+#mobile #m-project-wrapper .item{
+    line-height: 70px;
+}
+
+#mobile #m-project-wrapper .item .left{
+    text-align: left;
+}
+
+#mobile #m-project-wrapper .item .right{
+    text-align: right;
+}
+
+#mobile #m-project-wrapper img{
+   width: 120px; 
+}
+
 
 #mobile #m-project-wrapper .title{
 	font-size: 2.0rem;
+    padding-bottom: 1.6rem;
 }
 
 #mobile #m-trends .title{

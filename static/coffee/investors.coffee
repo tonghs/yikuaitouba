@@ -17,3 +17,8 @@ window.scroll = (id)->
 	},800)
 
 
+$("#play").fancybox({
+    padding: 0
+    width: 800
+    height: 490
+})
