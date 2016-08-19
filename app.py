@@ -8,6 +8,11 @@ import tornado.web
 from config import PORT, DEBUG, HOST, COOKIE_SECRET
 import _url  # noqa
 from misc._route import route
+import os
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 def write_error(self, status_code, **kwargs):

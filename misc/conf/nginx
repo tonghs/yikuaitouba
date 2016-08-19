@@ -1,7 +1,7 @@
 server {
-	server_name 192.168.1.123 yikuaitouba.com www.yikuaitouba.com;
+    server_name yikuaitouba.com www.yikuaitouba.com;
     listen 8889;
-	root /home/sunflower/project/yi/static;
+    root /root/app/yikuaitouba/static;
 
     add_header 'Access-Control-Allow-Origin' '*';
     add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
@@ -19,7 +19,7 @@ server {
      }
 
     location /favicon.ico {  
-        root /home/sunflower/project/yi/static/img;  
+        root /root/app/yikuaitouba/static/img;  
     } 
  }
  
