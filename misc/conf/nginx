@@ -18,6 +18,19 @@ server {
          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
      }
 
+    # 调试模式下静态文件
+    location ^~ /css/ {
+        root /root/app/yikuaitouba/static;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location ^~ /js/ {
+        root /root/app/yikuaitouba/static;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
     location /favicon.ico {  
         root /root/app/yikuaitouba/static/img;  
     } 
