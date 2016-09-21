@@ -5,6 +5,7 @@
   vm_project = new Vue({
     el: '#project-form',
     data: {
+      name: '',
       url: '',
       logo: '',
       investor: '0'
@@ -17,6 +18,7 @@
           data: this.$data,
           method: 'POST',
           success: function() {
+            vm_project.name = '';
             vm_project.url = '';
             vm_project.logo = '';
             return vm_project.investor = '0';

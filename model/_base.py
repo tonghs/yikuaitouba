@@ -23,11 +23,11 @@ class Base(Model):
 
 def init_db():
     from model.user import User
-    from model.task import Task
-    db.create_tables([User, Task])
+    from model.project import Project 
+    db.create_tables([Project])
 
 
 def drop_table():
     from model.user import User
-    from model.task import Task
-    db.drop_tables([User, Task])
+    from model.project import Project 
+    db.drop_tables([Project])
