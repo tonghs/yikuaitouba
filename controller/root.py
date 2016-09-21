@@ -13,24 +13,11 @@ class Index(Base):
 
 
 @route('/tv')
-class Investors(Base):
+class Index(Base):
     def get(self):
         self.render()
 
-
-# @route('/new')
-# class NewIndex(Base):
-#     def get(self):
-#         self.render()
-# 
-# 
-# @route('/mishi')
-# class Mishi(Base):
-#     def get(self):
-#         self.render()
-# 
-# 
-# @route('/danmu')
-# class Danmu(Base):
-#     def get(self):
-#         self.render()
+@route('/tv_')
+class NewIndex(Base):
+    def get(self):
+        self.render()
