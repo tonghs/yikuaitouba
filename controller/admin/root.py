@@ -12,3 +12,9 @@ from misc._route import route
 class Index(Base):
     def get(self):
         self.render()
+
+
+@route('/admin/video-mgr')
+class Video(Base):
+    def get(self):
+        self.render()

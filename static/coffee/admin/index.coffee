@@ -8,7 +8,6 @@ vm_project = new Vue({
     }
     methods: {
         submit: ->
-            this.$data
             $.ajax(
                 url: '/admin/project'
                 data: this.$data

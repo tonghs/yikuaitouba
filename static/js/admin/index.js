@@ -12,7 +12,6 @@
     },
     methods: {
       submit: function() {
-        this.$data;
         return $.ajax({
           url: '/admin/project',
           data: this.$data,

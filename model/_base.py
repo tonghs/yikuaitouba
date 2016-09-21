@@ -24,7 +24,8 @@ class Base(Model):
 def init_db():
     from model.user import User
     from model.project import Project 
-    db.create_tables([Project])
+    from model.video import Video
+    db.create_tables([Video])
 
 
 def drop_table():

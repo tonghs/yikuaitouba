@@ -6,6 +6,7 @@ from collections import defaultdict
 from _base import Base
 from misc._route import route
 from model.project import Project
+from model.video import Video
 
 
 @route('/')
@@ -27,6 +28,9 @@ class NewIndex(Base):
         for o in li:
             data[o.investor].append(o)
 
-        print data
 
-        self.render(data=data, li=li)
+        # 获取视频链接
+
+        video = Video.get(Video.id == 1)
+
+        self.render(data=data, li=li, video=video)
