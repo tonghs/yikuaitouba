@@ -6,7 +6,7 @@ from model._base import drop_table, init_db
 
 
 def main():
-    # drop_table()
+    drop_table()
     init_db()
 
 

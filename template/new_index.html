@@ -305,12 +305,12 @@
 		投资人	
 		<hr>
 	</div>
-	<div>
+	<div id="investor-list">
         % for i, n in enumerate(['dengfeng', 'yuminhong', 'zhangquanling', 'linyilun']):
         % if i%2 == 0:
-		<div class="item odd">
-        % else:
 		<div class="item even">
+        % else:
+		<div class="item odd">
         % endif
             % if i%2 == 0:
             <div class="project-avatar container left-avatar" style="background-image: url(http://o7ezmp5vl.bkt.clouddn.com/${n}.png?imageMogr2/thumbnail/440x);">
@@ -373,7 +373,7 @@
                         <img src="${o.logo}" alt="${o.name}">
                     </a>
                 </div>
-                % if i % 3 == 0 and i > 0:
+                % if i+1 % 4 == 0 and i > 0:
             </div>
             <div class="row">
                 % endif

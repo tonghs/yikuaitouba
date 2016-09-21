@@ -15,4 +15,4 @@ class Project(Base):
     create_time = IntegerField(default=int(time()), index=True)
 
     class Meta:
-        indexes = ((('investor', 'create_time'), True),)
+        indexes = ((('investor', 'create_time'), False),)

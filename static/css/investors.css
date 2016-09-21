@@ -180,6 +180,10 @@ nav #logo:hover {
     height: 120px;
 }
 
+#investor-list ul li.item {
+    line-height: 100px;
+}
+
 .project-list ul{
 	list-style: none;
 }
@@ -268,7 +272,8 @@ nav #logo:hover {
 }
 
 #project-wrapper img{
-   width: 150px; 
+    max-height: 80px;
+    width: 150px;
 }
 
 #tv-wrapper {
