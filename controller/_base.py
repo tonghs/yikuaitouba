@@ -27,8 +27,10 @@ class Base(tornado.web.RequestHandler):
         return template.render(**namespace)
 
     def render(self, **kwargs):
+        path = '/'.join(self.__module__.split('.')[1: -1])
         filename = "{0}.html".format(self._camel_to_underline(self.__class__.__name__))
         filename = "{0}{1}".format(filename[0].lower(), filename[1:])
+        filename = os.path.join(path, filename)
         if isinstance(kwargs, dict):
             kwargs.update(load_js=self.load_js)
             kwargs.update(load_css=self.load_css)

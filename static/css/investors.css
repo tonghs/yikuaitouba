@@ -551,3 +551,27 @@ nav #logo:hover {
 	text-decoration: none;
 }
 /************ mobile *****************/
+
+#hot_tv {
+    position: absolute;
+    background: #ff7200;
+    color: #fff;
+    padding: 1px 4px;
+    right: 9px;
+    top: 7px;
+    font-size: 10px;
+    -webkit-transform: scale(0.81);
+    border-radius: 2px;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+#triangle {
+    border: 3px solid transparent;
+    border-top-color: #ff7200;
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    right: 15px;
+    top: 24px;
+}
