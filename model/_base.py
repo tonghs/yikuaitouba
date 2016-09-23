@@ -25,7 +25,7 @@ def init_db():
     from model.user import User
     from model.project import Project 
     from model.video import Video
-    db.create_tables([Project, Video])
+    db.create_tables([User, Project, Video])
     import_data()
 
 
@@ -33,7 +33,7 @@ def drop_table():
     from model.user import User
     from model.project import Project 
     from model.video import Video
-    db.drop_tables([Project, Video])
+    db.drop_tables([User, Project, Video])
 
 
 def import_data():
@@ -56,7 +56,7 @@ def import_data():
         ('人人安', 'http://comefunding.com', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/4/renrenan.png', '0'),
         ('粉墨宝贝', 'http://comefunding.com/project/projectdetail?id=39', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/4/fenmobaobei.png', '0'),
         ('大卫之选', 'http://comefunding.com/project/projectdetail?id=43', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/5/daweizhixuan.png', '0'),
-        ('kiddie fun', 'http://comefunding.com/project/projectdetail?id=44', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/5/kiddlefun.png', '2'),
+        ('kiddie fun', 'http://comefunding.com/project/projectdetail?id=44', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/5/kiddlefun_.png', '2'),
         ('意念机', 'http://comefunding.com/project/projectdetail?id=45', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/5/yunrui.png', '0'),
         ('七天防臭袜', 'http://comefunding.com/project/projectdetail?id=46', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/5/yinsi.png', '0'),
         ('包师傅', 'http://comefunding.com/project/projectdetail?id=47', 'http://o7ezmp5vl.bkt.clouddn.com/program/logo/6/baoshifu.png', '0'),
@@ -66,7 +66,20 @@ def import_data():
     ] 
 
 
+    print "import project list..."
     from model.project import Project 
     for o in li:
         print o
         Project(name=o[0], url=o[1], logo=o[2], investor=o[3]).save()
+    print "done"
+
+    print "set video..."
+    from model.video import Video
+    Video(link="<iframe height=498 width=510 src='http://player.youku.com/embed/XMTcyNDcyNzA0NA==' frameborder=0 'allowfullscreen'></iframe>").save()
+    print "done"
+
+    print "insert user..."
+    from model.user import User
+    import hashlib
+    User(user='admin', name="管理员", pwd=hashlib.md5('xxxx').hexdigest()).save()
+    print "done"

@@ -2,10 +2,15 @@
 # -*- coding: utf-8 -*-
 
 from time import time
-from controller._base import Base
+import json
+
+from controller._base import JsonBase, AdminBase as Base
 from misc._route import route
 from model.project import Project as ProjectM
 from model.video import Video as VideoM
+from model.user import User
+from playhouse.shortcuts import model_to_dict
+
 
 @route('/admin/project')
 class Project(Base):
@@ -28,3 +33,22 @@ class Video(Base):
             VideoM(link=link).save()
 
         self.finish()
+
+@route('/j/admin/login')
+class Login(JsonBase):
+    def post(self):
+        user = self.get_argument('user', '')
+        pwd = self.get_argument('pwd', '')
+
+        d = dict(user=user, pwd=pwd)
+
+        result = False
+        msg = ''
+        user = User.login(**d)
+        if user:
+            self.set_secure_cookie("user", json.dumps(model_to_dict(user)))
+            result = True
+        else:
+            msg = '登录失败'
+
+        self.finish(data=dict(result=result, msg=msg))

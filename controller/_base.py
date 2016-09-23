@@ -2,10 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import os
+import json
 import mako.lookup
 import mako.template
 import tornado.web
 from tornado.escape import json_encode
+
+from playhouse.shortcuts import dict_to_model, model_to_dict
 
 from config import STATIC_HOST, APP
 from model.user import User
@@ -19,7 +22,6 @@ class Base(tornado.web.RequestHandler):
                                                  output_encoding='utf-8')
 
     def render_string(self, filename, **kwargs):
-        kwargs["current_user"] = self.current_user
         template = self.lookup.get_template(filename)
         namespace = self.get_template_namespace()
         namespace.update(kwargs)
@@ -40,7 +42,9 @@ class Base(tornado.web.RequestHandler):
 
     def get_current_user(self):
         j = self.get_secure_cookie("user")
-        return User.from_dict(j)
+
+        return dict_to_model(User, json.loads(j)) if j else None
+
 
     def load_js(self, src):
         return '{static_host}/js/{src}'.format(static_host=STATIC_HOST, src=src)
@@ -70,3 +74,11 @@ class JsonBase(tornado.web.RequestHandler):
 
             self.set_header('Content-Type', 'application/json; charset=UTF-8')
         super(JsonBase, self).finish(data)
+
+
+class AdminBase(Base):
+    def prepare(self):
+        if not self.current_user:
+            self.redirect('/admin/login')
+
+        super(AdminBase, self).prepare()

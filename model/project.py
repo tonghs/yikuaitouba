@@ -12,7 +12,7 @@ class Project(Base):
     url = CharField()
     logo = CharField()
     investor = IntegerField(index=True)
-    create_time = IntegerField(default=int(time()), index=True)
+    created_time = IntegerField(default=int(time()), index=True)
 
     class Meta:
-        indexes = ((('investor', 'create_time'), False),)
+        indexes = ((('investor', 'created_time'), False),)

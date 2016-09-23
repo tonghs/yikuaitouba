@@ -23,7 +23,7 @@ class Index(Base):
 @route('/tv_')
 class NewIndex(Base):
     def get(self):
-        li = Project.select().order_by(Project.create_time.asc())
+        li = Project.select().order_by(Project.created_time.asc())
         data = defaultdict(list)
         for o in li:
             data[o.investor].append(o)

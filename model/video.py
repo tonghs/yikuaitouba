@@ -10,7 +10,7 @@ from peewee import CharField, IntegerField, PrimaryKeyField
 class Video(Base):
     id = PrimaryKeyField()
     link = CharField()
-    update_time= IntegerField(default=int(time()))
+    updated_time= IntegerField(default=int(time()))
 
     @property
     def m_link(self):
