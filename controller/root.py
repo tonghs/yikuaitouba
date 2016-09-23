@@ -15,12 +15,12 @@ class Index(Base):
         self.redirect('http://comefunding.com', True)
 
 
-@route('/tv')
+@route('/tv_')
 class Index(Base):
     def get(self):
         self.render()
 
-@route('/tv_')
+@route('/tv')
 class NewIndex(Base):
     def get(self):
         li = Project.select().order_by(Project.created_time.asc())

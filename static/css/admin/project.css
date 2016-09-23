@@ -1,0 +1,28 @@
+.investor-0 {
+    color: #999999;
+}
+
+.investor-1 {
+    color: #3f903f;
+}
+
+.investor-2 {
+    color: #5bc0de;
+}
+
+.investor-3 {
+    color: #d9534f;
+}
+
+.investor-4 {
+    color: #f0ad4e;
+}
+
+.deal {
+    color: green;
+    text-align: right;
+}
+
+.ops a{
+    text-decoration: none; 
+}

@@ -20,6 +20,35 @@ class Project(Base):
 
         self.finish()
 
+
+@route('/admin/del_project')
+class _(Base):
+    def post(self):
+        id = self.get_argument('id', 0)
+        if id:
+            project = ProjectM.get(ProjectM.id == id)
+            if project:
+                project.delete_instance()
+
+        self.finish()
+
+@route('/admin/edit_project')
+class _(Base):
+    def post(self):
+        data = {k: self.get_argument(k) for k, v in self.request.arguments.iteritems()}
+        if data.get('id', 0):
+            project = ProjectM.get(ProjectM.id == data.get('id'))
+            if project:
+                for k, v in data.iteritems():
+                    if k == 'id':
+                        pass
+                    else:
+                        setattr(project, k, v)
+
+                project.save()
+
+        self.finish()
+
 @route('/admin/video')
 class Video(Base):
     def post(self):
